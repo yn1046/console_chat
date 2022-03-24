@@ -1,5 +1,8 @@
 [requires]
 nlohmann_json/3.10.3
+fmt/8.1.1
+cryptopp/8.5.0
+date/3.0.1
 
 [generators]
 cmake
