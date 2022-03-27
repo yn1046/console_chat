@@ -12,8 +12,6 @@ namespace cc {
         int id;
         string login;
         string password;
-        vector<int> chatrooms;
-        vector<int> p_chats;
     };
 
     inline void to_json(json &j, const cc::User &u) {

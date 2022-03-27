@@ -2,18 +2,15 @@
 #include <nlohmann/json.hpp>
 #include <fstream>
 #include <iomanip>
+#include "Controllers/ChatController.h"
+#include "Services/UserService.h"
+#include "Services/ChatService.h"
 
 using namespace std;
+using namespace cc;
 
 int main() {
-
-
-    ifstream i("output.json");
-    nlohmann::json j;
-    i >> j;
-
-    ofstream o("pretty.json");
-    o << setw(4) << j << endl;
+    new ChatController(new UserService, new ChatService);
 
     return 0;
 }
