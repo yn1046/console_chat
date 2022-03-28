@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 #include "../Models/User.h"
-#include "../Models/Chat.h"
+#include "../Models/Message.h"
 
 using namespace std;
 using namespace cc;
@@ -18,7 +18,8 @@ namespace cc {
         }
 
         void initialize();
-        vector<string> get_chat_names(User &user);
-        vector<Chat> get_chats();
+        vector<Message> get_messages();
+        vector<string> get_formatted_messages(const User *user);
+        void post_message(Message &message);
     };
 }
